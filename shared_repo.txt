@@ -1,0 +1,7 @@
+mkdir repo
+git init
+<copy files to this directory>
+git add .
+git commit -m 'Log message'
+git clone -l --bare .git ../repo.git
+cd ../; rm -rf repo 
