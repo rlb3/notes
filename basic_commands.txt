@@ -1,6 +1,10 @@
 Grab clone of working directory
     git clone server:/repo/dir working_dir
 
+Setup user name and email
+    git config user.name "name"
+    git config user.email "name@cpanel.net"
+    
 Update master
     git pull    # Fetch and merge into master branch. You must be in the master branch
 
