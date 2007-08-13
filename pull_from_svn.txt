@@ -1,0 +1,3 @@
+git svn clone <svn repo> -T trunk -t tags -b branches repo_name
+git svn fetch
+git svn rebase
