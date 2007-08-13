@@ -1,0 +1,50 @@
+Grab clone of working directory
+    git clone server:/repo/dir working_dir
+
+Add files or directories to index
+    git add file
+    git add . # look eveywhere for content to add
+
+Rename file
+    git mv file new_file
+    mv file new_file   # Unix commands can be used
+    git add new_file   # if unix command used
+
+Delete file
+    git rm file
+    git rm --cached file   # remove file from index but not working copy
+
+Status
+    git status         # Compare working copy to HEAD
+    git status HEAD    # Compare cache to HEAD
+
+Commit
+    git commit -m 'Log message'       # Commit every add to the cache
+    git commit -a -m 'Log message'    # Add new content to the cache then commit
+    git commit -s -m 'Log message'    # Sign commit
+
+Diff
+    git diff                     # Show differences from working copy to current HEAD
+    git diff branch              # Show differences between 'branch' and current branch
+    git diff master..branch      # Show all commits found in 'branch' and not in 'master'
+    git diff master...branch     # Show all commits not found in 'branch' or 'master'
+    git diff master..            # show all commits not found in master
+
+Show
+    git show             # Show last commit
+    git <commit>:file    # Cat file from another commit
+
+Branch
+    git branch                         # Show local branches
+    git branch -r                      # Show remote branches
+    git branch -a                      # Show local and remote branches
+    git branch new_branch              # Create new branch base of the current branch
+    git branch -d branch               # Delete local branch
+    git branch -D branch               # Force delete if there are commits in branch that are not
+                                       # Accessible from any other branch
+    git branch new_branch other_branch # Create new branch based on other_branch
+
+Switch
+    git checkout branch               # Checkout the branch in the current working directory
+    git checkout -b new_branch        # Create new_branch based on the current branch and switch to it
+    git checkout -b new_branch branch # Create new_branch based on the given 'branch' and switch to it
