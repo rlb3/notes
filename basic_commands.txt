@@ -1,6 +1,9 @@
 Grab clone of working directory
     git clone server:/repo/dir working_dir
 
+Update master
+    git pull # Fetch and merge into master branch. You must be in the master branch
+
 Add files or directories to index
     git add file
     git add . # look eveywhere for content to add
@@ -34,6 +37,9 @@ Show
     git show             # Show last commit
     git <commit>:file    # Cat file from another commit
 
+Merge
+    git merge branch     # Merge branch into current branch
+
 Branch
     git branch                         # Show local branches
     git branch -r                      # Show remote branches
@@ -48,3 +54,17 @@ Switch
     git checkout branch               # Checkout the branch in the current working directory
     git checkout -b new_branch        # Create new_branch based on the current branch and switch to it
     git checkout -b new_branch branch # Create new_branch based on the given 'branch' and switch to it
+
+Tag
+    git tag 1.0.0           # Tag the current commit
+    git tag 1.0.0 <commit>  # Tag the given commit
+    git tag -s 1.0.0        # Tag and sigh commit
+    git tag -d 1.0.0        # Delete the commit
+
+Using remote repository
+    git push/fetch origin master                             # Pull/Push master branch from origin to local master
+    git push/fetch origin master:mybranch                    # Pull/Push master branch from origin to local mybranch
+    git push/fetch http://remote.site/repo.git master:master # Pull/Push master from the remote repo into master
+    git push origin :branch                                  # Delete remote branch
+    
+    
