@@ -2,16 +2,16 @@ Grab clone of working directory
     git clone server:/repo/dir working_dir
 
 Update master
-    git pull # Fetch and merge into master branch. You must be in the master branch
+    git pull    # Fetch and merge into master branch. You must be in the master branch
 
 Add files or directories to index
-    git add file
-    git add . # look eveywhere for content to add
+    git add file    # Add the files content to the cache/index
+    git add .       # Look eveywhere for content to add
 
 Rename file
-    git mv file new_file
-    mv file new_file   # Unix commands can be used
-    git add new_file   # if unix command used
+    git mv file new_file # Rename file
+    mv file new_file     # Unix commands can be used
+    git add new_file     # if unix command used
 
 Delete file
     git rm file
