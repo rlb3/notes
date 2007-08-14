@@ -1,0 +1,90 @@
+h2. Grab clone of working directory
+
+* <pre>git clone server:/repo/dir working_dir</pre>
+
+h2. Setup user name and email
+
+* <pre>git config user.name "name"</pre>
+* <pre>git config user.email "name@cpanel.net"</pre>
+    
+h2. Update master
+
+* <pre>git pull    # Fetch and merge into master branch. You must be in the master branch</pre>
+
+h2. Add files or directories to index
+
+* <pre>git add file    # Add the files content to the cache/index</pre>
+* <pre>git add .       # Look eveywhere for content to add</pre>
+
+h2. Rename file
+
+* <pre>git mv file new_file # Rename file</pre>
+* <pre>mv file new_file     # Unix commands can be used</pre>
+* <pre>git add new_file     # if unix command used</pre>
+
+h2. Delete file
+
+* <pre>git rm file</pre>
+* <pre>git rm --cached file   # remove file from index but not working copy</pre>
+
+h2. Status
+
+* <pre>git status         # Compare working copy to HEAD</pre>
+* <pre>git status HEAD    # Compare cache to HEAD</pre>
+
+h2. Commit
+
+* <pre>git commit -m 'Log message'       # Commit every add to the cache</pre>
+* <pre>git commit -a -m 'Log message'    # Add new content to the cache then commit</pre>
+* <pre>git commit -s -m 'Log message'    # Sign commit</pre>
+
+h2. Diff
+
+* <pre>git diff                     # Show differences from working copy to current HEAD</pre>
+* <pre>git diff branch              # Show differences between 'branch' and current branch</pre>
+* <pre>git diff master..branch      # Show all commits found in 'branch' and not in 'master'</pre>
+* <pre>git diff master...branch     # Show all commits not found in 'branch' or 'master'</pre>
+* <pre>git diff master..            # show all commits not found in master</pre>
+
+h2. Show
+
+* <pre>git show             # Show last commit</pre>
+* <pre>git <commit>:file    # Cat file from another commit</pre>
+
+h2. Merge
+
+* <pre>git merge branch     # Merge branch into current branch</pre>
+
+h2. Branch
+
+* <pre>git branch                         # Show local branches</pre>
+* <pre>git branch -r                      # Show remote branches</pre>
+* <pre>git branch -a                      # Show local and remote branches</pre>
+* <pre>git branch new_branch              # Create new branch base of the current branch</pre>
+* <pre>git branch -d branch               # Delete local branch</pre>
+* <pre>git branch -D branch               # Force delete if there are commits in branch that are not
+                                          # Accessible from any other branch</pre>
+* <pre>git branch new_branch other_branch # Create new branch based on other_branch</pre>
+
+h2. Switch
+
+* <pre>git checkout branch               # Checkout the branch in the current working directory</pre>
+* <pre>git checkout -b new_branch        # Create new_branch based on the current branch and switch to it</pre>
+* <pre>git checkout -b new_branch branch # Create new_branch based on the given 'branch' and switch to it</pre>
+
+h2. Tag
+
+* <pre>git tag 1.0.0           # Tag the current commit</pre>
+* <pre>git tag 1.0.0 <commit>  # Tag the given commit</pre>
+* <pre>git tag -s 1.0.0        # Tag and sign commit</pre>
+* <pre>git tag -d 1.0.0        # Delete the commit</pre>
+* <pre>git push --tags         # Push any created tags to origin remote host</pre>
+
+h2. Using remote repository
+
+* <pre>git push/fetch origin master                             # Pull/Push master branch from origin to local master</pre>
+* <pre>git push/fetch origin master:mybranch                    # Pull/Push master branch from origin to local mybranch</pre>
+* <pre>git push/fetch http://remote.site/repo.git master:master # Pull/Push master from the remote repo into master</pre>
+* <pre>git push origin :branch                                  # Delete remote branch</pre>
+    
+    
