@@ -1,0 +1,5 @@
+Email patches to the dev list for code review
+    git checkout fixes_branch    # Make sure you are in the branch with new code
+    git format-patch master      # Create patch against give branch
+    git send-email <patches>     # The send-email command will accept blobs so: 00* to send all generated patch files
+    rm <patches>
