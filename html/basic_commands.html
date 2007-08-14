@@ -1,0 +1,147 @@
+<h2>Grab clone of working directory</h2>
+
+
+	<ul>
+	<li><pre>git clone server:/repo/dir working_dir</pre></li>
+	</ul>
+
+
+	<h2>Setup user name and email</h2>
+
+
+	<ul>
+	<li><pre>git config user.name "name"</pre></li>
+		<li><pre>git config user.email "name@cpanel.net"</pre></li>
+	</ul>
+
+
+	<h2>Update master</h2>
+
+
+	<ul>
+	<li><pre>git pull    # Fetch and merge into master branch. You must be in the master branch</pre></li>
+	</ul>
+
+
+	<h2>Add files or directories to index</h2>
+
+
+	<ul>
+	<li><pre>git add file    # Add the files content to the cache/index</pre></li>
+		<li><pre>git add .       # Look eveywhere for content to add</pre></li>
+	</ul>
+
+
+	<h2>Rename file</h2>
+
+
+	<ul>
+	<li><pre>git mv file new_file # Rename file</pre></li>
+		<li><pre>mv file new_file     # Unix commands can be used</pre></li>
+		<li><pre>git add new_file     # if unix command used</pre></li>
+	</ul>
+
+
+	<h2>Delete file</h2>
+
+
+	<ul>
+	<li><pre>git rm file</pre></li>
+		<li><pre>git rm --cached file   # remove file from index but not working copy</pre></li>
+	</ul>
+
+
+	<h2>Status</h2>
+
+
+	<ul>
+	<li><pre>git status         # Compare working copy to HEAD</pre></li>
+		<li><pre>git status HEAD    # Compare cache to HEAD</pre></li>
+	</ul>
+
+
+	<h2>Commit</h2>
+
+
+	<ul>
+	<li><pre>git commit -m 'Log message'       # Commit every add to the cache</pre></li>
+		<li><pre>git commit -a -m 'Log message'    # Add new content to the cache then commit</pre></li>
+		<li><pre>git commit -s -m 'Log message'    # Sign commit</pre></li>
+	</ul>
+
+
+	<h2>Diff</h2>
+
+
+	<ul>
+	<li><pre>git diff                     # Show differences from working copy to current HEAD</pre></li>
+		<li><pre>git diff branch              # Show differences between 'branch' and current branch</pre></li>
+		<li><pre>git diff master..branch      # Show all commits found in 'branch' and not in 'master'</pre></li>
+		<li><pre>git diff master...branch     # Show all commits not found in 'branch' or 'master'</pre></li>
+		<li><pre>git diff master..            # show all commits not found in master</pre></li>
+	</ul>
+
+
+	<h2>Show</h2>
+
+
+	<ul>
+	<li><pre>git show             # Show last commit</pre></li>
+		<li><pre>git &lt;commit&gt;:file    # Cat file from another commit</pre></li>
+	</ul>
+
+
+	<h2>Merge</h2>
+
+
+	<ul>
+	<li><pre>git merge branch     # Merge branch into current branch</pre></li>
+	</ul>
+
+
+	<h2>Branch</h2>
+
+
+	<ul>
+	<li><pre>git branch                         # Show local branches</pre></li>
+		<li><pre>git branch -r                      # Show remote branches</pre></li>
+		<li><pre>git branch -a                      # Show local and remote branches</pre></li>
+		<li><pre>git branch new_branch              # Create new branch base of the current branch</pre></li>
+		<li><pre>git branch -d branch               # Delete local branch</pre></li>
+		<li><pre>git branch -D branch               # Force delete if there are commits in branch that are not
+                                          # Accessible from any other branch</pre></li>
+		<li><pre>git branch new_branch other_branch # Create new branch based on other_branch</pre></li>
+	</ul>
+
+
+	<h2>Switch</h2>
+
+
+	<ul>
+	<li><pre>git checkout branch               # Checkout the branch in the current working directory</pre></li>
+		<li><pre>git checkout -b new_branch        # Create new_branch based on the current branch and switch to it</pre></li>
+		<li><pre>git checkout -b new_branch branch # Create new_branch based on the given 'branch' and switch to it</pre></li>
+	</ul>
+
+
+	<h2>Tag</h2>
+
+
+	<ul>
+	<li><pre>git tag 1.0.0           # Tag the current commit</pre></li>
+		<li><pre>git tag 1.0.0 &lt;commit&gt;  # Tag the given commit</pre></li>
+		<li><pre>git tag -s 1.0.0        # Tag and sign commit</pre></li>
+		<li><pre>git tag -d 1.0.0        # Delete the commit</pre></li>
+		<li><pre>git push --tags         # Push any created tags to origin remote host</pre></li>
+	</ul>
+
+
+	<h2>Using remote repository</h2>
+
+
+	<ul>
+	<li><pre>git push/fetch origin master                             # Pull/Push master branch from origin to local master</pre></li>
+		<li><pre>git push/fetch origin master:mybranch                    # Pull/Push master branch from origin to local mybranch</pre></li>
+		<li><pre>git push/fetch http://remote.site/repo.git master:master # Pull/Push master from the remote repo into master</pre></li>
+		<li><pre>git push origin :branch                                  # Delete remote branch</pre></li>
+	</ul>

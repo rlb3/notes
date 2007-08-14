@@ -1,0 +1,38 @@
+
+h2. What's the difference between merge and rebase
+
+<pre>
+    
+Master and branch that have diverged
+
+          o-o-o <- branch
+         /
+    o-o-o-o-o <- master
+    
+Merge
+           Merge point
+                |
+          o-o-o-o <- branch
+         /     /
+    o-o-o-o-o <- master
+    
+Rebase
+
+              o-o-o <- branch
+             /
+    o-o-o-o-o <- master
+</pre>   
+    
+    
+Rebase is used when you have a topic branch you want to keep up to date then merge back to the original branch on your local repository.
+ 
+Merge can also be used for this locally but merge is the recommended to get new changes in to a long lived branch living on the remote repository.
+
+
+h2. Merge
+
+* git merge branch   # Currently in master
+    
+h2. Rebase
+
+* git rebase master  # Currently in topic branch
