@@ -19,7 +19,7 @@ Rebase
     
     
     
-Rebase it use when you have a topic branch you want to keep up to date then merge back to the original branch on your local repository.
+Rebase is used when you have a topic branch you want to keep up to date then merge back to the original branch on your local repository.
 
 Merge can also be used for this locally but merge is the recommended to get new changes in to a long lived branch living on the remote repository.
 
