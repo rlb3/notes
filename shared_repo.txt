@@ -1,7 +1,14 @@
 mkdir repo
+cd repo
 git init
 <copy files to this directory>
 git add .
 git commit -m 'Log message'
-git clone -l --bare .git ../repo.git
-cd ../; rm -rf repo 
+
+cd ..
+mkdir repo.git
+cd repo.git
+git --bare init --shared
+git --bare fetch ../repo master:master
+cd ..
+rm -rf repo

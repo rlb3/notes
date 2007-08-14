@@ -64,6 +64,7 @@ Tag
     git tag 1.0.0 <commit>  # Tag the given commit
     git tag -s 1.0.0        # Tag and sign commit
     git tag -d 1.0.0        # Delete the commit
+    git push --tags         # Push any created tags to origin remote host
 
 Using remote repository
     git push/fetch origin master                             # Pull/Push master branch from origin to local master
