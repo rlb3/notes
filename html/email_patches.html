@@ -1,0 +1,9 @@
+<p>ih2. Email patches to the dev list for code review</p>
+
+
+	<ul>
+	<li><pre>git checkout fixes_branch    # Make sure you are in the branch with new code</pre></li>
+		<li><pre>git format-patch master      # Create patch against give branch</pre></li>
+		<li><pre>git send-email &lt;patches&gt;     # The send-email command will accept blobs so: 00* to send all generated patch files</pre></li>
+		<li><pre>rm &lt;patches&gt;</pre></li>
+	</ul>
