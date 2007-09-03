@@ -2,3 +2,4 @@ curl-ssl
 expat
 asciidoc
 xmlto
+openssl
