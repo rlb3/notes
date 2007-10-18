@@ -1,0 +1,7 @@
+[color] 
+        status = auto
+        branch = auto
+        diff = auto
+[user]  
+        name = <Full Name>
+        email = <Email Address>
