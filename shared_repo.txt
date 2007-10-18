@@ -1,14 +1,16 @@
-mkdir repo
-cd repo
-git init
-<copy files to this directory>
-git add .
-git commit -m 'Log message'
+# Create a shared repository
 
-cd ..
-mkdir repo.git
-cd repo.git
-git --bare init --shared
-git --bare fetch ../repo master:master
-cd ..
-rm -rf repo
+    mkdir repo
+    cd repo
+    git init
+    <copy files to this directory>
+    git add .
+    git commit -m 'Log message'
+
+    cd ..
+    mkdir repo.git
+    cd repo.git
+    git --bare init --shared
+    git --bare fetch ../repo master:master
+    cd ..
+    rm -rf repo

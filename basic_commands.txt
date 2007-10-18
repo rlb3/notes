@@ -1,50 +1,50 @@
-Grab clone of working directory
+# Grab clone of working directory
     git clone server:/repo/dir working_dir
 
-Setup user name and email
+# Setup user name and email
     git config user.name "name"
     git config user.email "name@cpanel.net"
     
-Update master
+# Update master
     git pull    # Fetch and merge into master branch. You must be in the master branch
 
-Add files or directories to index
+# Add files or directories to index
     git add file    # Add the files content to the cache/index
     git add .       # Look eveywhere for content to add
 
-Rename file
+# Rename file
     git mv file new_file # Rename file
     mv file new_file     # Unix commands can be used
     git add new_file     # if unix command used
 
-Delete file
+# Delete file
     git rm file
     git rm --cached file   # remove file from index but not working copy
 
-Status
+# Status
     git status         # Compare working copy to HEAD
     git status HEAD    # Compare cache to HEAD
 
-Commit
+# Commit
     git commit -m 'Log message'       # Commit every add to the cache
     git commit -a -m 'Log message'    # Add new content to the cache then commit
     git commit -s -m 'Log message'    # Sign commit
 
-Diff
+# Diff
     git diff                     # Show differences from working copy to current HEAD
     git diff branch              # Show differences between 'branch' and current branch
     git diff master..branch      # Show all commits found in 'branch' and not in 'master'
     git diff master...branch     # Show all commits not found in 'branch' or 'master'
     git diff master..            # show all commits not found in master
 
-Cat
+# Cat
     git show                  # Show last commit
     git show <commit>:file    # Cat file from another commit
 
-Merge
+# Merge
     git merge branch     # Merge branch into current branch
 
-Branch
+# Branch
     git branch                         # Show local branches
     git branch -r                      # Show remote branches
     git branch -a                      # Show local and remote branches
@@ -54,19 +54,19 @@ Branch
                                        # accessible from any other branch
     git branch new_branch other_branch # Create new_branch based on other_branch
 
-Switch
+# Switch
     git checkout branch               # Checkout the branch in the current working directory
     git checkout -b new_branch        # Create new_branch based on the current branch and switch to it
     git checkout -b new_branch branch # Create new_branch based on the given 'branch' and switch to it
 
-Tag
+# Tag
     git tag 1.0.0           # Tag the current commit
     git tag 1.0.0 <commit>  # Tag the given commit
     git tag -s 1.0.0        # Tag and sign commit
     git tag -d 1.0.0        # Delete the commit
     git push --tags         # Push any created tags to origin remote host
 
-Using remote repository
+# Using remote repository
     git push origin master                                                     # Push master branch from origin to local master
     git push origin master:mybranch                                            # Push master branch from origin to local mybranch
     git push remote.site/repo.git local_branch:refs/heads/remote_branch        # Push master from the remote repo into master source:destination

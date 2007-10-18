@@ -1,5 +1,5 @@
-curl-ssl
-expat
-asciidoc
-xmlto
-openssl
+1. curl-ssl
+2. expat
+3. asciidoc
+4. xmlto
+5. openssl

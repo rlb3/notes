@@ -1,3 +1,4 @@
-git svn clone <svn repo> -T trunk -t tags -b branches repo_name # Create new git repo from subversion repo
-git svn fetch                                                   # Grab any new commit from subversion repo
-git svn rebase                                                  # Bring master branch upto date after fetch
+# Common git-svn commands
+    git svn clone <svn repo> -T trunk -t tags -b branches repo_name     # Create new git repo from subversion repo
+    git svn fetch                                                       # Grab any new commit from subversion repo  
+    git svn rebase                                                      # Bring master branch upto date after fetch

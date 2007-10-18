@@ -1,7 +1,8 @@
-[color] 
-        status = auto
-        branch = auto
-        diff = auto
-[user]  
-        name = <Full Name>
-        email = <Email Address>
+# Example ~/.gitconfig file
+    [color] 
+            status = auto
+            branch = auto
+            diff = auto
+    [user]  
+            name = <Full Name>
+            email = <Email Address>
