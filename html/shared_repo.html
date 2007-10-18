@@ -1,0 +1,17 @@
+<h1 id="createasharedrepository">Create a shared repository</h1>
+
+<pre><code>mkdir repo
+cd repo
+git init
+&lt;copy files to this directory&gt;
+git add .
+git commit -m 'Log message'
+
+cd ..
+mkdir repo.git
+cd repo.git
+git --bare init --shared
+git --bare fetch ../repo master:master
+cd ..
+rm -rf repo
+</code></pre>
