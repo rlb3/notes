@@ -27,3 +27,12 @@ Merge can also be used for this locally but merge is the recommended to get new 
     
 # Rebase
         git rebase master  # Currently in topic branch
+
+# Rebase Interactive
+    git rebase -i master    # Rebasing interactively
+                            # means that you have a chance
+                            # to edit the commits which are
+                            # rebased. You can reorder the
+                            # commits, and you can remove
+                            # them (weeding out bad or
+                            # otherwise unwanted patches).
