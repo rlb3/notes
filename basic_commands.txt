@@ -11,6 +11,7 @@
 # Add files or directories to index
     git add file    # Add the files content to the cache/index
     git add .       # Look eveywhere for content to add
+    ait add -i      # Add unstaged content interactively
 
 # Rename file
     git mv file new_file # Rename file
@@ -42,7 +43,9 @@
     git show <commit>:file    # Cat file from another commit
 
 # Merge
-    git merge branch     # Merge branch into current branch
+    git merge branch          # Merge branch into current branch
+    git rebase branch         # Bring current brnach up to date with another branch without merging.
+    git rebase -i HEAD~n      # Where n is one more than new commits to a branch. It allows you to squash all new commits in to one commit
 
 # Branch
     git branch                         # Show local branches
@@ -63,6 +66,7 @@
     git tag 1.0.0           # Tag the current commit
     git tag 1.0.0 <commit>  # Tag the given commit
     git tag -s 1.0.0        # Tag and sign commit
+    git tag -u 1.0.0        # Tag and gpg sign commit
     git tag -d 1.0.0        # Delete the commit
     git push --tags         # Push any created tags to origin remote host
 
