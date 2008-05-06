@@ -83,3 +83,8 @@
     git fetch origin master                                                    # Pull master branch from origin to local master
     git fetch origin remote_branch:local_branch                                # Pull remote_branch from origin to local local_branch
     git fetch remote.site/repo.git master:master                               # Pull master from the remote repo into master
+
+# git man pages
+    # man pages are not installed by default from the tar ball
+    man git-command
+    git --help command
