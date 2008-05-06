@@ -62,9 +62,9 @@
     git branch new_branch other_branch     # Create new_branch based on other_branch
 
 # Switch
-    git checkout branch               # Checkout the branch in the current working directory
-    git checkout -b new_branch        # Create new_branch based on the current branch and switch to it
-    git checkout -b new_branch branch # Create new_branch based on the given 'branch' and switch to it
+    git checkout branch                    # Checkout the branch in the current working directory
+    git checkout -b new_branch             # Create new_branch based on the current branch and switch to it
+    git checkout -b new_branch branch      # Create new_branch based on the given 'branch' and switch to it
 
 # Tag
     git tag 1.0.0           # Tag the current commit
