@@ -10,8 +10,8 @@
 
 # Add files or directories to index
     git add file    # Add the files content to the cache/index
-    git add .       # Look eveywhere for content to add
-    ait add -i      # Add unstaged content interactively
+    git add .       # Look everywhere for content to add
+    ait add -i      # Add upstaged content interactively
 
 # Rename file
     git mv file new_file # Rename file
@@ -44,10 +44,10 @@
 
 # Merge
     git merge branch                        # Merge branch into current branch
-    git rebase branch                       # Bring current brnach up to date with another branch without merging.
+    git rebase branch                       # Bring current branch up to date with another branch without merging.
     git rebase -i HEAD~n                    # Where n is one more than new commits to a branch. It allows you to
                                             # squash all new commits in to one commit
-    git merge --squash --no-commit branch   # squashs all new commits from branch in to one new commit but does
+    git merge --squash --no-commit branch   # squashes all new commits from branch in to one new commit but does
                                             # not commit to the repo. The commit message contains all commit
                                             # message from the branch
 
