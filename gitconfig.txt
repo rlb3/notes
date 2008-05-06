@@ -1,8 +1,18 @@
 # Example ~/.gitconfig file
-    [color] 
+    [user]
+            name = <Full Name>
+            email = <Email Address>
+    [color]
             status = auto
             branch = auto
             diff = auto
-    [user]  
-            name = <Full Name>
-            email = <Email Address>
+
+    [alias]
+            st = status
+            di = diff
+            co = checkout
+            ci = commit
+            br = branch
+            sta = stash
+            squash = merge --squash --no-commit
+
