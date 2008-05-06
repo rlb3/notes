@@ -43,19 +43,23 @@
     git show <commit>:file    # Cat file from another commit
 
 # Merge
-    git merge branch          # Merge branch into current branch
-    git rebase branch         # Bring current brnach up to date with another branch without merging.
-    git rebase -i HEAD~n      # Where n is one more than new commits to a branch. It allows you to squash all new commits in to one commit
+    git merge branch                        # Merge branch into current branch
+    git rebase branch                       # Bring current brnach up to date with another branch without merging.
+    git rebase -i HEAD~n                    # Where n is one more than new commits to a branch. It allows you to
+                                            # squash all new commits in to one commit
+    git merge --squash --no-commit branch   # squashs all new commits from branch in to one new commit but does
+                                            # not commit to the repo. The commit message contains all commit
+                                            # message from the branch
 
 # Branch
-    git branch                         # Show local branches
-    git branch -r                      # Show remote branches
-    git branch -a                      # Show local and remote branches
-    git branch new_branch              # Create new branch base of the current branch
-    git branch -d branch               # Delete local branch
-    git branch -D branch               # Force delete if there are commits in branch that are not a
-                                       # strict subset of your current HEAD
-    git branch new_branch other_branch # Create new_branch based on other_branch
+    git branch                             # Show local branches
+    git branch -r                          # Show remote branches
+    git branch -a                          # Show local and remote branches
+    git branch new_branch                  # Create new branch base of the current branch
+    git branch -d branch                   # Delete local branch
+    git branch -D branch                   # Force delete if there are commits in branch that are not a
+                                           # strict subset of your current HEAD
+    git branch new_branch other_branch     # Create new_branch based on other_branch
 
 # Switch
     git checkout branch               # Checkout the branch in the current working directory
