@@ -69,6 +69,7 @@
 # Tag
     git tag 1.0.0           # Tag the current commit
     git tag 1.0.0 <commit>  # Tag the given commit
+    git tag -a 1.0.0        # Anotated tag (preferred method)
     git tag -s 1.0.0        # Tag and sign commit
     git tag -u 1.0.0        # Tag and gpg sign commit
     git tag -d 1.0.0        # Delete the commit
@@ -77,6 +78,7 @@
 # Using remote repository
     git push origin master                                                     # Push master branch from origin to local master
     git push origin master:mybranch                                            # Push master branch from origin to local mybranch
+    git push origin --all                                                      # Push all branches to remote
     git push remote.site/repo.git local_branch:refs/heads/remote_branch        # Push master from the remote repo into master source:destination
     git push origin :branch                                                    # Delete remote branch
 
@@ -86,5 +88,4 @@
 
 # git man pages
     # man pages are not installed by default from the tar ball
-    man git-command
     git --help command
