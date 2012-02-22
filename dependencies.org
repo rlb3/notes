@@ -1,3 +1,5 @@
+#+TITLE: Dependencies
+
 1. curl-ssl
 2. expat
 3. asciidoc

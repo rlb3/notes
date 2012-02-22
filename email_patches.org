@@ -1,0 +1,8 @@
+#+TITLE: Email Patches
+
+* Email patches to the dev list for code review
+    - git checkout fixes\_branch :: Make sure you are in the branch with new code
+    - git format-patch -o ../patches master :: Create patch against given branch and place them in ../patches
+    - git format-patches --stdout master > patch.diff :: Pipe all patches to stdout
+    - git send-email ../patches/* :: The send-email command will accept globs
+    - rm ../patches/ :: Delete patches directory

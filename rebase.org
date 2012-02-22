@@ -1,0 +1,42 @@
+#TITLE: Rebase
+
+
+* What's the difference between merge and rebase
+#+BEGIN_SRC text
+              o-o-o <- branch
+             /
+        o-o-o-o-o <- master
+#+END_SRC
+* Merge
+#+BEGIN_SRC text
+               Merge point
+                    |
+              o-o-o-o <- branch
+             /     /
+        o-o-o-o-o <- master
+#+END_SRC    
+* Rebase
+#+BEGIN_SRC text
+                  o-o-o <- branch
+                 /
+        o-o-o-o-o <- master
+#+END_SRC     
+    
+*Rebase is used when you have a topic branch you want to keep up to
+date then merge back to the original branch on your local repository.
+Merge can also be used for this locally but merge is the recommended
+to get new changes in to a long lived branch living on the remote
+repository.*
+
+* Merge
+  - git merge branch :: Currently in master
+    
+* Rebase
+  - git rebase master :: Currently in topic branch
+
+* Rebase Interactive
+  - git rebase -i master :: Rebasing interactively means that you have
+       a chance to edit the commits which are rebased. You can reorder
+       the commits, and you can remove them (weeding out bad or
+       otherwise unwanted patches).
+

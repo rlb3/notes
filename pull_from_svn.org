@@ -1,0 +1,16 @@
+#+TITLE: Pull from Subversion
+
+*  Common git-svn commands
+    - git svn clone <svn repo> -T trunk -t tags -b branches
+         repo\_name :: Create new git repo from subversion repo
+
+    - git svn clone -s <svn repo> repo\_name :: Create new git repo
+         from subversion repo with standard layout
+
+    - git svn clone <svn repo>/branch repo\_name :: Bring over just
+         one branch from svn
+
+    - git svn fetch :: Grab any new commit from subversion repo  
+
+    - git svn rebase :: Bring master branch upto date after fetch
+

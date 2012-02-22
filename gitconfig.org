@@ -1,0 +1,20 @@
+#+TITLE: GitConfig file
+
+* Example ~/.gitconfig file
+  * [user]
+    - name = <Full Name>
+    - email = <Email Address>
+  *  [color]
+    - status = auto
+    - branch = auto
+    - diff = auto
+
+  * [alias]
+    - st = status
+    - di = diff
+    - co = checkout
+    - ci = commit
+    - br = branch
+    - sta = stash
+    - squash = merge --squash --no-commit
+
